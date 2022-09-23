@@ -1,32 +1,17 @@
-<header>
-    <nav class="navbar navbar-expand-lg bg-black">
-      <div class="container-fluid">
-        <a class="navbar-brand text-light" routerLink="/">SolemmeMortis</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/historia">Historia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/integrantes">Integrantes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/albumes">Albumes</a>
-            </li>
-          </ul>
+<app-menu></app-menu>
 
-          <ul class="nav-item">
-            <img src="https://firebasestorage.googleapis.com/v0/b/soledmemortiz.appspot.com/o/logo.jfif?alt=media&token=27a3dadd-7362-441f-bbad-9a1eef0199f3" alt="" class="pentagrama"> 
-           
-          </ul>
+<h1>Albunes</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4 mt-5" *ngFor="let dato of respuestaServicio">
+            <img src="{{dato.imagenes}}" alt="" class="img-fluid w-100">
+            <h1 class="text-center fw-bold mt-3 text-white">{{dato.nombre}}</h1>
+            <h2 class="text-center fw-bold mt-3 text-white">{{dato.numeroPersonas}}</h2>
+            <h2 class="text-center fw-bold mt-3 text-white">{{dato.valorNoche}}</h2>
+
         </div>
-      </div>
-    </nav>
-  </header>
+    </div>
+</div>
 
+<app-footer></app-footer>
