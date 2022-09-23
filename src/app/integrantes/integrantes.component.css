@@ -1,0 +1,18 @@
+.pentagrama{
+    height: 50px;
+    margin-Right: 10px;
+}
+
+.domos{
+    height: 550px;
+    margin-right: 30px;
+}
+
+.maldito{
+    height: 650px;
+    margin-right: 25px;
+}
+
+.lorem{
+    display: flex;
+}

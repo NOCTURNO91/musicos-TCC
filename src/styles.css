@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+.fondo{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/soledmemortiz.appspot.com/o/fondo2.png?alt=media&token=4a9c6b15-91db-48ca-b959-88420b7cbd48");
+    display: cover;
+    background-size: cover;
+    background-position: top center;
+    padding: 10% 30% 50% 20%;
+}
