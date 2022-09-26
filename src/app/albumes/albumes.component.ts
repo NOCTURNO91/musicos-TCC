@@ -1,26 +1,25 @@
 import { Component } from '@angular/core';
-import { TapObserver } from 'rxjs/internal/operators/tap';
-import { TopService } from '../services/top.service';
+import { SpotyService } from '../services/spoty.service';
+
+
 
 @Component({
   selector: 'app-albumes',
   templateUrl: './albumes.component.html',
   styleUrls: ['./albumes.component.css']
 })
+
 export class AlbumesComponent {
 
-  public respuestaServicio:any[]=[]
+  public canciones:any[]=[]
 
 
-  constructor(public peticion:TopService) { 
-    //como utilizar los datos que llegan de un servicio (API)
-    this.peticion.buscar()
+  constructor(public peticion:SpotyService) {
+    this.peticion.traerCanciones()
     .subscribe(respuesta=>{
-      this.respuestaServicio=respuesta.datos
-      console.log(this.respuestaServicio)
-    })
+      console.log(respuesta)
+      this.canciones=respuesta.tracks
+      console.log(this.canciones)
+  })
   }
-
-  
-
 }

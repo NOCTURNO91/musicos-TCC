@@ -11,6 +11,7 @@ import { IntegrantesComponent } from './integrantes/integrantes.component';
 import { AlbumesComponent } from './albumes/albumes.component';
 import { HttpClientModule} from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,

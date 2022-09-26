@@ -4,11 +4,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-4 mt-5" *ngFor="let dato of respuestaServicio">
-            <img src="{{dato.imagenes}}" alt="" class="img-fluid w-100">
-            <h1 class="text-center fw-bold mt-3 text-white">{{dato.nombre}}</h1>
-            <h2 class="text-center fw-bold mt-3 text-white">{{dato.numeroPersonas}}</h2>
-            <h2 class="text-center fw-bold mt-3 text-white">{{dato.valorNoche}}</h2>
+        <div class="col-12 col-md-4 mt-5" *ngFor="let cancion of canciones">
+            <img src="{{cancion.album.images[0].url}}" alt="" class="img-fluid w-100">
+            <audio src="{{cancion.preview_url}}" controls></audio>
+            <h1 class="text-center fw-bold mt-3 text-white">{{cancion.name}}</h1>
 
         </div>
     </div>
